@@ -50,3 +50,4 @@ system/templates/testing/*
 /user/cli/config/security.yaml
 /user/themes/quark/
 /user/themes/mytheme/node_modules/
+/user/themes/mytheme/node_modules/
