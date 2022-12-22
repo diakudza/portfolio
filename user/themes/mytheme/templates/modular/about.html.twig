@@ -1,0 +1,14 @@
+<div class="hero min-h-screen ">
+    <div class="hero-content flex flex-col lg:flex-row justify-center">
+
+        {% if page.media.images|first %}
+            {{ page.media.images|first.html('','','rounded-lg shadow-2xl max-w-sm') | raw }}
+        {% endif %}
+
+        <div class="mt-10 lg:ml-6 flex flex-col ">
+            <h1 class="text-5xl font-bold">{{ page.title|e }}</h1>
+            <p class="py-6">{{ content | raw }}</p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+name: Mytheme
+slug: mytheme
+type: theme
+version: 0.1.0
+description: my
+icon: rebel
+author:
+  name: diakudza
+  email: diakudza@gmail.com
+homepage: https://github.com/diakudza/grav-theme-mytheme
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/diakudza/grav-theme-mytheme/issues
+readme: https://github.com/diakudza/grav-theme-mytheme/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+    validation: loose
+    fields:
+        dropdown.enabled:
+            type: toggle
+            label: Dropdown in Menu
+            highlight: 1
+            default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        production:
+            type: toggle
+            label: Production Mode
+            highlight: 1
+            default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        blog_section:
+          type: section
+          title: Blog Defaults
+          underline: true

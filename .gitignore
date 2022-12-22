@@ -23,8 +23,6 @@ user/data/*
 !user/data/.*
 user/plugins/*
 !user/plugins/.*
-user/themes/*
-!user/themes/.*
 user/localhost/config/security.yaml
 user/config/security.yaml
 
@@ -50,3 +48,5 @@ tests/error.log
 system/templates/testing/*
 /user/config/versions.yaml
 /user/cli/config/security.yaml
+/user/themes/quark/
+/user/themes/mytheme/node_modules/
