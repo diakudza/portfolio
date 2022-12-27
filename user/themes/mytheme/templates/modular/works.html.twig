@@ -1,18 +1,18 @@
 <div id="works" class="modular-row callout  min-h-screen">
-    <p class="text-3xl mt-24 mb-24">Мои работы:</p>
+    <p class="text-3xl mt-24 mb-24 text-center">Мои работы:</p>
 
     {% for p in page.collection %}
         <a href="/home/_works/{{ p.slug }}">
-            <div class="mt-24 md:mt-5 rounded-md bg-base-100 shadow-xl grid md:grid-flow-col grid-flow-row justify-items-center">
-                <figure>
+            <div class="mt-24 md:mt-5 rounded-md bg-base-100 shadow-xl grid md:grid-flow-col grid-flow-row justify-items-center gap-4">
+                <figure class="flex justify-items-center">
                     {% set image = p.media.images |first %}
                     {% if image %}
                         {{ image.cropZoom(200, 150).html('','','rounded-lg shadow-2xl max-w-sm') | raw }}
                     {% endif %}
                 </figure>
-                <div class="card-body p-5">
-                    <h2 class="card-title text-2xl">{{ p.title|e }}</h2>
-                    {{ p.summary|raw }}
+                <div class="flex flex-col p-5 gap-4">
+                    <h2 class=" text-2xl text-center md:text-left">{{ p.title|e }}</h2>
+                    <div class="">{{ p.summary|raw }}</div>
                 </div>
 
             </div>

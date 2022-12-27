@@ -2,14 +2,20 @@
 
 {% block content %}
     <div class="grid grid-rows justify-items-center mt-10">
-        <div class="w-full">
+        <div class="justify-center max-w-2xl">
             {% set image = page.media.images |first %}
             {% if image %}
-                {{ image.html('','','rounded-lg shadow-2xl max-w-md') | raw }}
+                {{ image.html('','','rounded-lg shadow-2xl') | raw }}
             {% endif %}
         </div>
         <div class="mt-10">
             {{ page.content|raw }}
+            {% if page.header.git  %}
+            <p class="mt-5">GIT: <a href="{{ page.header.git | raw }}">{{ page.header.git | raw }}</a></p>
+            {% endif %}
+            {% if page.header.site  %}
+            <p class="">Сайт:  <a href="{{ page.header.site | raw }}">{{ page.header.site | raw }}</a></p>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

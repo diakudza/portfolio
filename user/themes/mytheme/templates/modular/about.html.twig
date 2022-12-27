@@ -6,8 +6,9 @@
         {% endif %}
 
         <div class="mt-10 lg:ml-6 flex flex-col ">
-            <h1 class="text-5xl font-bold">{{ page.title|e }}</h1>
+            <h1 class="text-5xl font-bold text-center md:text-left">{{ page.title|e }}</h1>
             <p class="py-6">{{ content | raw }}</p>
+            <p class="py-6">Владею:  <code>{{ page.header.skills | raw }}</code></p>
         </div>
     </div>
 </div>

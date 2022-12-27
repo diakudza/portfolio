@@ -1769,22 +1769,6 @@ html {
     transform: rotate(360deg);
   }
 }
-.card-body {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: var(--padding-card, 2rem);
-  gap: 0.5rem;
-}
-.card-body :where(p) {
-  flex-grow: 1;
-}
-.card.image-full > .card-body {
-  position: relative;
-  z-index: 20;
-  --tw-text-opacity: 1;
-  color: hsl(var(--nc) / var(--tw-text-opacity));
-}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -1838,6 +1822,18 @@ html {
   .footer-center {
     grid-auto-flow: row dense;
   }
+}
+.label {
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .hero {
   display: grid;
@@ -1923,6 +1919,28 @@ html {
 .menu > :where(li:focus) > :where(ul) {
   display: flex;
 }
+.textarea {
+  flex-shrink: 1;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 2;
+  min-height: 3rem;
+  border-width: 1px;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  border-radius: var(--rounded-btn, 0.5rem);
+}
 .avatar-group :where(.avatar) {
   overflow: hidden;
   border-radius: 9999px;
@@ -1934,6 +1952,10 @@ html {
   border-top-width: 2px;
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+.btm-nav>* .label {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .btn.loading.btn-square:before,
     .btn.loading.btn-circle:before {
@@ -1960,19 +1982,6 @@ html {
     transform: scale(1);
   }
 }
-.card.compact .card-body {
-  padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.card-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-}
 @keyframes checkmark {
   0% {
     background-position-y: 5px;
@@ -1991,6 +2000,10 @@ html {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.label a:hover {
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
 }
 .link:focus {
   outline: 2px solid transparent;
@@ -2189,6 +2202,28 @@ html {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
 }
+.textarea:focus {
+  outline: 2px solid hsla(var(--bc) / 0.2);
+  outline-offset: 2px;
+}
+.textarea-disabled,
+  .textarea[disabled] {
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 0.2;
+}
+.textarea-disabled::-moz-placeholder, .textarea[disabled]::-moz-placeholder {
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2;
+}
+.textarea-disabled::placeholder,
+  .textarea[disabled]::placeholder {
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2;
+}
 @keyframes toast-pop {
   0% {
     transform: scale(0.9);
@@ -2232,6 +2267,36 @@ html {
 .prose :where(tbody tr, thead):not(:where([class~="not-prose"] *)) {
   border-bottom-color: hsl(var(--bc) / 20%);
 }
+.artboard.phone-1.horizontal,
+      .artboard.phone-1.artboard-horizontal {
+  width: 568px;
+  height: 320px;
+}
+.artboard.phone-2.horizontal,
+      .artboard.phone-2.artboard-horizontal {
+  width: 667px;
+  height: 375px;
+}
+.artboard.phone-3.horizontal,
+      .artboard.phone-3.artboard-horizontal {
+  width: 736px;
+  height: 414px;
+}
+.artboard.phone-4.horizontal,
+      .artboard.phone-4.artboard-horizontal {
+  width: 812px;
+  height: 375px;
+}
+.artboard.phone-5.horizontal,
+      .artboard.phone-5.artboard-horizontal {
+  width: 896px;
+  height: 414px;
+}
+.artboard.phone-6.horizontal,
+      .artboard.phone-6.artboard-horizontal {
+  width: 1024px;
+  height: 320px;
+}
 .btm-nav-xs>*:where(.active) {
   border-top-width: 1px;
 }
@@ -2272,22 +2337,6 @@ html {
   right: 7%;
   box-shadow: 0 0 0 2px hsl(var(--b1));
 }
-.card-compact .card-body {
-  padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.card-compact .card-title {
-  margin-bottom: 0.25rem;
-}
-.card-normal .card-body {
-  padding: var(--padding-card, 2rem);
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-.card-normal .card-title {
-  margin-bottom: 0.75rem;
-}
 .visible {
   visibility: visible;
 }
@@ -2297,6 +2346,9 @@ html {
 }
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
 }
 .mt-24 {
   margin-top: 6rem;
@@ -2316,8 +2368,8 @@ html {
 .min-h-screen {
   min-height: 100vh;
 }
-.max-w-lg {
-  max-width: 32rem;
+.max-w-2xl {
+  max-width: 42rem;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -2342,6 +2394,9 @@ html {
 }
 .gap-10 {
   gap: 2.5rem;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -2371,13 +2426,13 @@ html {
   font-size: 3rem;
   line-height: 1;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .font-bold {
   font-weight: 700;
@@ -2398,6 +2453,15 @@ html {
   }
   .md\:grid-flow-col {
     grid-auto-flow: column;
+  }
+  .md\:flex-row {
+    flex-direction: row;
+  }
+  .md\:justify-center {
+    justify-content: center;
+  }
+  .md\:text-left {
+    text-align: left;
   }
 }
 @media (min-width: 1024px) {

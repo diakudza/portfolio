@@ -1,9 +1,8 @@
 ---
 title: contact
+tg: 'https://t.me/Diakudza'
+mail: 'mailto:diakudza@gmail.com'
+tel: 'tel:+79281777063'
+git: 'https://github.com/diakudza'
 ---
-
-* tg: [@Diakudza](https://t.me/Diakudza)
-* mail: [diakudza@gmail.com](mailto:diakudza@gmail.com) 
-*  tel: [+79281777063](tel:+79281777063) 
-*  git: [diakudza](https://github.com/diakudza) 
 
